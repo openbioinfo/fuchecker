@@ -7,29 +7,34 @@ sys.path.insert(0,dirpath)
 from ctfusion.samblaster.samblaster import samblaster
 from ctfusion.getfusion.getfusion import getfusion
 
-def main(sam,fusion_file,prefix):
+def ctfusion(sam,fusion_file,prefix,output):
     
     #samblaster
-    samblaster(sam,prefix)
+    samblaster(sam,prefix,output)
     #getfusion
-    getfusion(fusion_file,prefix)
+    getfusion(fusion_file,prefix,output)
 
-    return finish
+    return "finish!"
 
 if __name__ == "__main__":
     from docopt import docopt
     Usage = """
     Usage:
-        ctfusion.py -i <sam> -f <fusions> -p <prefix>
+        ctfusion.py -i <sam> -o <output_path> -f <fusions> -p <prefix>
 
     Options:
-        -i,--input=<bam>          input sam files
+        -i,--input=<sam>          input sam files
         -f,--fusion=<fusions>     fusions list file
-        -p,--prefix=<prefix>      output prefix  
+        -p,--prefix=<prefix>      output prefix
+        -o,--output=<path>        output path
 
     """
     args = docopt(Usage)
     sam = args["--input"]
     fusion_file = args["--fusion"]
     prefix = args["--prefix"]
-    main(sam,fusion_file,prefix)
+    output = args["--output"]
+    check_path = output[-1:]
+    if check_path != '/':
+        output = output+'/'
+    ctfusion(sam,fusion_file,prefix,output)
