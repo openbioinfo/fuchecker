@@ -22,7 +22,7 @@ Status
 
 .. note::
 
-   **not reviewed yet.**
+    **not reviewed yet.**
 
 installation
 ===========
@@ -36,7 +36,7 @@ Usage
 
 .. just_type_command::
 
-    /path/to/ctfusion.py -h
+    /path/to/``ctfusion.py`` -h .
 
 must_args
 ---------
