@@ -59,9 +59,11 @@ def getfusion (fusion_file,prefix,outpath):
     #check fusion is right
 
     #out print fusion
-
-    for key in get.keys():
-        print key,get[key]
+    find_fusion = outpath+prefix+".find_fusion.txt"
+    with open(find_fusion,"w") as out:
+        for key in get.keys():
+            line = key+"\t"+str(get[key])+"\n"
+            out.write(line)
 
 if __name__ == "__main__":
     import sys

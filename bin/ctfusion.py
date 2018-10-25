@@ -6,6 +6,7 @@ dirpath = os.path.join(os.path.dirname(os.path.realpath(__file__)),"../")
 sys.path.insert(0,dirpath)
 from ctfusion.samblaster.samblaster import samblaster
 from ctfusion.getfusion.getfusion import getfusion
+from ctfusion.report.table import table
 
 def ctfusion(sam,fusion_file,prefix,output):
     
@@ -13,7 +14,8 @@ def ctfusion(sam,fusion_file,prefix,output):
     samblaster(sam,prefix,output)
     #getfusion
     getfusion(fusion_file,prefix,output)
-
+    #report
+    table(output,prefix,output)
     return "finish!"
 
 if __name__ == "__main__":
