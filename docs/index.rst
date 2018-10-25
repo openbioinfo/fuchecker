@@ -68,9 +68,10 @@ Code
 ====
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-
+    Guide <index>
+    Code Docs <api/modules>
 
 Indices and tables
 ==================
