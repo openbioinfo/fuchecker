@@ -34,7 +34,7 @@ use git to clone code::
 Usage
 =====
 
-.. just_type_command::
+..  just_type_command::
 
     /path/to/``ctfusion.py`` -h .
 
