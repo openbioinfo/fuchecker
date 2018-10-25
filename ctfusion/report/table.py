@@ -19,7 +19,7 @@ def table (result_path,prefix,report_path):
             if key in get:
                 sumfu[key] = int(get[key])+int(fu_data[1])
     
-    report_file = report_path+prefix+"report.xls"
+    report_file = report_path+prefix+".report.xls"
     with open(report_file,"w") as out:
         for result in sumfu.keys():
             pri = result+"\t"+str(sumfu[result])+"\n"
