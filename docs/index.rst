@@ -30,13 +30,17 @@ installation
 use git to clone code::
 
     git clone git@192.168.1.251:/home/git/ctfusion.git
-    
+
+..  attention::
+
+    if you want to run ``ctfusion`` on local server without docker , try to add ``samblaster``.
+
 Usage
 =====
 
-..  just_type_command::
+just type command::
 
-    /path/to/``ctfusion.py`` -h .
+    /path/to/ctfusion.py -h
 
 must_args
 ---------
