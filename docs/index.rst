@@ -24,7 +24,7 @@ Status
 
    **not reviewed yet.**
 
-nstallation
+installation
 ===========
 
 use git to clone code::
@@ -34,7 +34,7 @@ use git to clone code::
 Usage
 =====
 
-just type command::
+.. just_type_command::
 
     /path/to/ctfusion.py -h
 
